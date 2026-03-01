@@ -4,6 +4,8 @@
     { "source": "/login-by-admin", "destination": "/login.html" },
     { "source": "/admin", "destination": "/admin.html" },
     { "source": "/admin/:path*", "destination": "/admin.html" },
+
+    { "source": "/akun/:id", "destination": "/akun_ml.html" },
     { "source": "/akun", "destination": "/akun_ml.html" }
   ]
 }
