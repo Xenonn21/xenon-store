@@ -368,7 +368,8 @@
       </div>
       <!-- pesan jika kosong (tampilkan hanya setelah data ter-load) -->
       <template x-if="filteredLength === 0 && loaded">
-        <div class="empty-message" style="padding: 1rem; width: 100%; text-align: center; font-size: 0.9rem;">
+        <div class="empty-message" :class="{ 'filter-active': selectedFilter !== 'all' }"
+          style="padding: 1rem; width: 100%; text-align: center; font-size: 0.9rem;">
 
           <template x-if="selectedFilter === 'available'">
             <div class="shine-text">Tidak ada akun yang tersedia</div>
