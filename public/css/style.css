@@ -349,21 +349,6 @@ header div {
     border-radius: 0.5rem;
 }
 
-@keyframes glowBlink {
-  0%, 100% {
-    opacity: 1;
-    text-shadow: 0 0 5px rgba(255,255,255,0.2);
-  }
-  50% {
-    opacity: 0.4;
-    text-shadow: 0 0 15px rgba(255,255,255,0.6);
-  }
-}
-
-.blink-text {
-  animation: glowBlink 1.4s ease-in-out infinite;
-}
-
 .shine-text {
   background: linear-gradient(
     90deg,
@@ -384,10 +369,10 @@ header div {
 
 @keyframes shineMove {
   0% {
-    background-position: -100% 0;
+    background-position: 100% 0;
   }
   100% {
-    background-position: 100% 0;
+    background-position: -100% 0;
   }
 }
 
