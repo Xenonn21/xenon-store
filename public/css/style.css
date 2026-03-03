@@ -61,8 +61,16 @@ header div {
     border: none;
 }
 
-.btn-menu:hover {
-    background: #000000;
+@media (max-width: 480px) {
+        .btn-menu:active {
+        background: #000000;
+    }
+}
+
+@media (max-width: 1024px) {
+    .btn-menu:hover {
+        background: #000000;
+    }
 }
 
 .btn-menu i {
