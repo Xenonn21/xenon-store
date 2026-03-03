@@ -1700,8 +1700,7 @@ html.is-touch button:focus {
 
 
     .container-search {
-        top: 7rem;
-        width: 90%;
+        width: 95%;
     }
 
     .container-load-more {
