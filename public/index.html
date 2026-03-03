@@ -181,20 +181,30 @@
 
       <!-- Jika search terbuka dan query kosong tapi hasil filter (available/sold/all) = 0 -->
       <template
-        x-if="!typing && tempSearchQuery.trim().length === 0 && filteredDataForSearchAll.length === 0 && loaded">
-        <div
-          style="width:100%; display:flex; flex-direction:column; align-items:center; padding:1rem; color:#ffffff80; font-size: 0.9rem;">
-          <template x-if="selectedFilterSearch === 'available'">
-            <div>Tidak ada akun yang tersedia</div>
-          </template>
-          <template x-if="selectedFilterSearch === 'sold'">
-            <div>Tidak ada akun yang terjual</div>
-          </template>
-          <template x-if="selectedFilterSearch === 'all'">
-            <div>Akun tidak ditemukan</div>
-          </template>
-        </div>
-      </template>
+  x-if="!typing && tempSearchQuery.trim().length === 0 && filteredDataForSearchAll.length === 0 && loaded">
+  <div
+    style="width:100%; display:flex; flex-direction:column; align-items:center; padding:1rem; font-size: 0.9rem;">
+
+    <template x-if="selectedFilterSearch === 'available'">
+      <div class="shimmer-text" data-text="Tidak ada akun yang tersedia">
+        Tidak ada akun yang tersedia
+      </div>
+    </template>
+
+    <template x-if="selectedFilterSearch === 'sold'">
+      <div class="shimmer-text" data-text="Tidak ada akun yang terjual">
+        Tidak ada akun yang terjual
+      </div>
+    </template>
+
+    <template x-if="selectedFilterSearch === 'all'">
+      <div class="shimmer-text" data-text="Akun tidak ditemukan">
+        Akun tidak ditemukan
+      </div>
+    </template>
+
+  </div>
+</template>
 
       <!-- Looping Data (filteredDataForSearch digunakan supaya special-case searchOpen & empty query) -->
       <template x-if="!typing">
