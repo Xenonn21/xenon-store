@@ -259,6 +259,7 @@ header div {
     background: linear-gradient(90deg, #6366f1, #a855f7);
     color: #fff;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .search-filter-btn.active::before {
@@ -314,6 +315,7 @@ header div {
     background: linear-gradient(90deg, #6366f1, #a855f7);
     color: #fff;
     font-weight: 700;
+    pointer-events: none;
 }
 
 /* hasil search area */
@@ -687,6 +689,7 @@ main {
     color: #fff;
     box-shadow: 0 6px 18px rgba(251, 255, 0, 0.08);
     overflow: hidden;
+    pointer-events: none;
 }
 
 .filter-btn.active::before {
@@ -749,6 +752,7 @@ main {
     background: linear-gradient(90deg, #6366f1, #a855f7);
     color: #fff;
     font-weight: 700;
+    pointer-events: none;
 }
 
 .container-list-3 {
