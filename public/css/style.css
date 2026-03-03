@@ -360,20 +360,19 @@ header div {
   );
   background-size: 200% 100%;
   background-position: -100% 0;
-  
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
-  animation: shineMove 2s linear infinite;
+}
+
+/* animasi hanya jalan kalau container-search punya class active */
+.container-search.search-active .shine-text {
+  animation: shineMove 2.5s linear infinite;
 }
 
 @keyframes shineMove {
-  0% {
-    background-position: -100% 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
+  0% { background-position: -100% 0; }
+  100% { background-position: 100% 0; }
 }
 
 .search-links {
