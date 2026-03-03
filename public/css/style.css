@@ -350,12 +350,14 @@ header div {
 }
 
 .shine-text {
-    background: linear-gradient(90deg,
-            rgba(255, 255, 255, 0.4) 0%,
-            rgba(255, 255, 255, 0.4) 40%,
-            rgba(255, 255, 255, 1) 50%,
-            rgba(255, 255, 255, 0.4) 60%,
-            rgba(255, 255, 255, 0.4) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0.4) 0%,
+        rgba(255,255,255,0.4) 40%,
+        rgba(255,255,255,1) 50%,
+        rgba(255,255,255,0.4) 60%,
+        rgba(255,255,255,0.4) 100%
+    );
     background-size: 200% 100%;
     background-position: -100% 0;
 
@@ -363,24 +365,15 @@ header div {
     -webkit-text-fill-color: transparent;
 }
 
-/* animasi hanya jalan kalau container-search punya class active */
-.container-search.search-active .shine-text {
-    animation: shineMove 2.5s linear infinite;
-}
-
-/* 🔥 animasi aktif kalau parent ada class filter-active */
+/* 🔥 animasi aktif jika SALAH SATU kondisi terpenuhi */
+.container-search.search-active .shine-text,
 .empty-message.filter-active .shine-text {
     animation: shineMove 2.5s linear infinite;
 }
 
 @keyframes shineMove {
-    0% {
-        background-position: -100% 0;
-    }
-
-    100% {
-        background-position: 100% 0;
-    }
+    0% { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
 }
 
 .search-links {
