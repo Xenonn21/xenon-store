@@ -364,7 +364,7 @@ header div {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
-  animation: shineMove 2s ease-in-out infinite;
+  animation: shineMove 2s linear infinite;
 }
 
 @keyframes shineMove {
@@ -372,7 +372,7 @@ header div {
     background-position: -100% 0;
   }
   100% {
-    background-position: 100% -10px;
+    background-position: 100% 0;
   }
 }
 
