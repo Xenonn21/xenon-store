@@ -340,7 +340,7 @@
       <div class="container-list-3">
         <!-- Modified: staggered fade + index + key with animCounterMain -->
         <template x-for="(game, idx) in visibleData" :key="game.namaAkun + '|' + animCounterMain">
-          <a :href="`/akun/${game.public_id}`" class="card-parents stagger-fade"
+          <a :href="`/mlbb/${game.public_id}`" class="card-parents stagger-fade"
             :style="`animation-delay: ${getMainDelay(idx)}s`" x-transition:enter="fade-up-enter"
             x-transition:enter-start="fade-up-enter-start" x-transition:enter-end="fade-up-enter-end"
             x-transition:leave="fade-up-leave" x-transition:leave-start="fade-up-leave-start"
