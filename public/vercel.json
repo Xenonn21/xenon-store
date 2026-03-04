@@ -5,7 +5,7 @@
     { "source": "/admin", "destination": "/admin.html" },
     { "source": "/admin/:path*", "destination": "/admin.html" },
 
-    { "source": "/mlbb/:id", "destination": "/akun_ml.html" },
-    { "source": "/mlbb", "destination": "/akun_ml.html" }
+    { "source": "/game/mobile-legends/:id", "destination": "/akun_ml.html" },
+    { "source": "/game/mobile-legends", "destination": "/akun_ml.html" }
   ]
 }
