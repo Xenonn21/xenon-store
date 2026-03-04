@@ -214,7 +214,7 @@ header div {
 .container-search {
     position: fixed;
     z-index: 100;
-    top: 10rem;
+    top: 5rem;
     padding: 1rem;
     background: #242424;
     width: 50%;
