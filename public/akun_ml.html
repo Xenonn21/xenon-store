@@ -223,7 +223,7 @@
       <!-- Looping Data (filteredDataForSearch digunakan supaya special-case searchOpen & empty query) -->
       <template x-if="!typing">
         <template x-for="(game, idx) in filteredDataForSearch" :key="game.namaAkun + '|' + animCounterSearch">
-          <a :href="`/akun-ml/${game.public_id}`" class="search-links stagger-fade"
+          <a :href="`/akun/${game.public_id}`" class="search-links stagger-fade"
             :style="`animation-delay: ${getSearchDelay(idx)}s`">
             <div class="search-thumb">
               <div class="card-sold-search" x-show="!game.status" x-cloak aria-hidden="true">
