@@ -203,7 +203,7 @@
       <!-- Looping Data (filteredDataForSearch digunakan supaya special-case searchOpen & empty query) -->
       <template x-if="!typing">
         <template x-for="(game, idx) in filteredDataForSearch" :key="game.namaAkun + '|' + animCounterSearch">
-          <a :href="`/akun/${game.public_id}`" class="search-links stagger-fade"
+          <a :href="`/mobile-legends/${game.public_id}`" class="search-links stagger-fade"
             :style="`animation-delay: ${getSearchDelay(idx)}s`">
             <div class="search-thumb">
               <div class="card-sold-search" x-show="!game.status" x-cloak aria-hidden="true">
@@ -340,7 +340,7 @@
       <div class="container-list-3">
         <!-- Modified: staggered fade + index + key with animCounterMain -->
         <template x-for="(game, idx) in visibleData" :key="game.namaAkun + '|' + animCounterMain">
-          <a :href="`/akun/${game.public_id}`" class="card-parents stagger-fade"
+          <a :href="`/akun-ml/${game.public_id}`" class="card-parents stagger-fade"
             :style="`animation-delay: ${getMainDelay(idx)}s`" x-transition:enter="fade-up-enter"
             x-transition:enter-start="fade-up-enter-start" x-transition:enter-end="fade-up-enter-end"
             x-transition:leave="fade-up-leave" x-transition:leave-start="fade-up-leave-start"

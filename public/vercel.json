@@ -5,7 +5,7 @@
     { "source": "/admin", "destination": "/admin.html" },
     { "source": "/admin/:path*", "destination": "/admin.html" },
 
-    { "source": "/akun/:id", "destination": "/akun_ml.html" },
-    { "source": "/akun", "destination": "/akun_ml.html" }
+    { "source": "akun-ml/:id", "destination": "/akun_ml.html" },
+    { "source": "/akun-ml", "destination": "/akun_ml.html" }
   ]
 }
