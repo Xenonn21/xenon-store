@@ -4,12 +4,16 @@
   --panel-fg: #e6edf5;
   --muted: #c1c2c4;
   --input-bg: transparent;       /* <- yellow input background */
-  --input-border: #c9b94a;   /* darker yellow-ish border */
+  --input-border: #4c00ff;   /* darker yellow-ish border */
   --accent: #00b342;
   --accent-hover: #008b33;
   --success: #16a34a;
   --danger: #ef4444;
   --radius: 10px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-close {
@@ -160,7 +164,7 @@
 #edit-akun-panel input:focus,
 #edit-akun-panel textarea:focus,
 #edit-akun-panel select:focus {
-  border-color: rgba(255, 193, 7, 0.95);  /* kuning-gold focus */
+  border-color: var(--input-border);  /* kuning-gold focus */
   box-shadow: 0 6px 18px rgba(255,193,7,0.06);
 }
 
@@ -279,7 +283,6 @@ main {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    border: 2px solid #fbff00;
     cursor: pointer;
 }
 
@@ -426,11 +429,11 @@ main {
 }
 
 #form-akun input:focus {
-    border-color: #fbff00;
+    border-color: var(--input-border);
 }
 
 #form-akun select:focus {
-    border-color: #fbff00;
+    border-color: var(--input-border);
 }
 
 #form-akun select option {
@@ -443,22 +446,38 @@ main {
     height: 2.5rem;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    border: 1px solid #fbff00;
+    border: 1px solid var(--input-border);
     outline: none;
     background: transparent;
-    color: #fbff00;
+    color: var(--input-border);
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     transition: 0.2s ease;
 }
 
 #form-akun button:hover {
-    background: #fbff00;
-    color: #242424;
+    background: var(--input-border);
+    color: #ffffff;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrap::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-wrap::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
 }
 
 table {
   width: 100%;
+  min-width: 700px;
   border-collapse: collapse;
   margin-top: 1.5rem;
   font-family: 'Poppins', sans-serif;
@@ -479,7 +498,7 @@ table thead th {
   text-align: left;
   font-weight: 600;
   text-transform: uppercase;
-  color: #fbff00;
+  color: var(--input-border);
   border-bottom: 2px solid #333;
   letter-spacing: 0.5px;
 }
@@ -709,7 +728,7 @@ table td button.delete:hover {
 #panel-convert-overlay.show { display: block; }
 
 /* Sidebar active highlight */
-.sidebar-btn.active { background: rgba(255,255,255,0.03); border-left: 3px solid #ffee00; }
+.sidebar-btn.active { background: rgba(255,255,255,0.03); border-left: 3px solid var(--input-border); }
 
 /* Button style (override jika ada di admin.css) */
 .btn-action { display:inline-block; padding:.45rem .8rem; border-radius:8px; border:0; cursor:pointer; background:#1976d2; color:#fff; text-decoration:none; }
@@ -725,9 +744,9 @@ table td button.delete:hover {
   --convert-bg: var(--panel-bg, #111);
   --convert-fg: var(--panel-fg, #e6edf5);
   --convert-muted: var(--muted, #c1c2c4);
-  --convert-accent: var(--accent, #ffd54a);
-  --convert-accent-2: #ffb74d;
-  --convert-card: #0f0f11;
+--convert-accent: #4f46e5;   /* indigo */
+  --convert-accent-2: #9333ea; /* purple */
+    --convert-card: #0f0f11;
   --convert-card-border: rgba(255,255,255,0.04);
   --convert-radius: 12px;
 }
@@ -828,7 +847,7 @@ table td button.delete:hover {
 }
 #panel-convert .btn.primary {
   background: linear-gradient(90deg,var(--convert-accent),var(--convert-accent-2));
-  color:#111;
+  color:#ffffff;
   box-shadow: 0 8px 30px rgba(255,200,60,0.06);
 }
 

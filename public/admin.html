@@ -68,9 +68,9 @@
   </script>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/admin.css">
-  <link rel="stylesheet" href="assets/loader.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/admin.css">
+  <link rel="stylesheet" href="/assets/loader.css">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/b0ce53bf51.js" crossorigin="anonymous"></script>
@@ -191,76 +191,86 @@
     <section id="panel-index" class="panel-section">
       <!-- Container -->
       <h1 class="">Admin Panel — Akun Index</h1>
+<div class="table-wrap">
+  <table class="">
+    <thead>
+      <tr>
+        <th class="">ID</th>
+        <th class="">Nama</th>
+        <th class="">Harga</th>
+        <th class="">Gambar</th>
+        <th class="">Status</th>
+        <th class="">Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="akun-body"></tbody>
+  </table>
+</div>
 
-      <table class="">
-        <thead>
-          <tr>
-            <th class="">ID</th>
-            <th class="">Nama</th>
-            <th class="">Harga</th>
-            <th class="">Gambar</th>
-            <th class="">Status</th>
-            <th class="">Aksi</th>
-          </tr>
-        </thead>
-        <tbody id="akun-body"></tbody>
-      </table>
     </section>
 
     <section id="panel-detail" class="panel-section">
       <h1>Admin Panel — Akun Detail</h1>
 
-      <!-- Tabel 1: Data Utama -->
-      <table class="table-detail">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nama</th>
-            <th>Harga</th>
-            <th>ID Akun</th>
-            <th>Deskripsi</th>
-            <th>Rank</th>
-            <th>Skin</th>
-            <th>Hero</th>
-          </tr>
-        </thead>
-        <tbody id="akun-detail-body-utama"></tbody>
-      </table>
+      <div class="table-wrap">    
+        <!-- Tabel 1: Data Utama -->
+        <table class="table-detail">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nama</th>
+              <th>Harga</th>
+              <th>ID Akun</th>
+              <th>Deskripsi</th>
+              <th>Rank</th>
+              <th>Skin</th>
+              <th>Hero</th>
+            </tr>
+          </thead>
+          <tbody id="akun-detail-body-utama"></tbody>
+        </table>
+      </div>
 
-      <!-- Tabel 2: Data Tambahan -->
-      <table class="table-detail">
-        <thead>
-          <tr>
-            <th>Win Rate</th>
-            <th>Pertandingan</th>
-            <th>Magic Core</th>
-            <th>Emblem</th>
-            <th>Pribadi/Beli</th>
-            <th>Log</th>
-            <th>Bind</th>
-            <th>Status</th>
-            <th>Gambar</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody id="akun-detail-body-tambahan"></tbody>
-      </table>
+      <div class="table-wrap">
+        <!-- Tabel 2: Data Tambahan -->
+        <table class="table-detail">
+          <thead>
+            <tr>
+              <th>Win Rate</th>
+              <th>Pertandingan</th>
+              <th>Magic Core</th>
+              <th>Emblem</th>
+              <th>Pribadi/Beli</th>
+              <th>Log</th>
+              <th>Bind</th>
+              <th>Status</th>
+              <th>Gambar</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="akun-detail-body-tambahan"></tbody>
+        </table>
+      </div>
+
     </section>
 
     <section id="gambar-detail" class="panel-section">
       <h1>Admin Panel — Gambar Detail</h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nama Akun</th>
-            <th>Gambar</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody id="gambar-body"></tbody>
-      </table>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nama Akun</th>
+              <th>Gambar</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="gambar-body"></tbody>
+        </table>
+      </div>
+
     </section>
 
   </main>
@@ -315,8 +325,8 @@
   </div>
 
 
-  <script src="js/admwnwim23.min.js"></script>
-  <script src="assets/lload34mdelp.min.js"></script>
+  <script src="/js/admwnwim23.min.js"></script>
+  <script src="/assets/lload34mdelp.min.js"></script>
 </body>
 
 </html>
