@@ -41,7 +41,13 @@ header {
     z-index: 101;
 }
 
-header div {
+.hdr-hero {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.hdr-btn {
     display: flex;
     align-items: center;
     justify-content: right;
@@ -52,7 +58,6 @@ header div {
     width: max-content;
     height: max-content;
     padding: 0.7rem;
-    margin-left: 0.5rem;
     display: grid;
     place-items: center;
     cursor: pointer;
@@ -63,13 +68,13 @@ header div {
 
 @media (max-width: 480px) {
     .btn-menu:active {
-        background: #000000;
+        background: #000000a2;
     }
 }
 
 @media (min-width: 1024px) {
     .btn-menu:hover {
-        background: #000000;
+        background: #000000a2;
     }
 }
 
@@ -1818,27 +1823,31 @@ html.is-touch button:focus {
         text-align: left;
     }
 
+    .container-unggul-parent h2 {
+        font-size: 1.1rem;
+    }
+
     .container-unggul {
         grid-template-columns: repeat(1, 1fr);
         gap: 0.5rem;
     }
 
     .container-unggul-child {
-        height: 6rem;
-        padding: 0.5rem 2rem;
+        height: 5rem;
+        padding: 0rem 1.5rem;
         border-radius: 0.5rem;
     }
 
     .container-unggul-child div h3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .container-unggul-child div p {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
     .container-unggul-child i {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .container-banner {
@@ -2020,16 +2029,25 @@ html.is-touch button:focus {
         height: 9px;
     }
 
+    .container-unggul-parent h2 {
+        font-size: 1.2rem;
+    }
+
+    .container-unggul-child {
+        height: 5.5rem;
+        padding: 0 1.5rem;
+    }
+
     .container-unggul-child div h3 {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .container-unggul-child div p {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 
     .container-unggul-child i {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .akun-banner {
