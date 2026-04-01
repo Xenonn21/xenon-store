@@ -1,0 +1,41 @@
+/* box animasi keatas */
+#bg-anim {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.box {
+  position: absolute;
+  bottom: -120px;
+
+  width: var(--size);
+  height: var(--size);
+
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  opacity: var(--opacity);
+  border-radius: var(--radius);
+
+  animation: floatUp var(--duration) linear forwards;
+
+  will-change: transform;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  /* 🔥 titik belok (ini bikin ga lurus) */
+  50% {
+    transform: translate3d(var(--moveX1), -60vh, 0)
+               rotate(calc(var(--rotate) * 0.5));
+  }
+
+  100% {
+    transform: translate3d(var(--moveX2), -120vh, 0)
+               rotate(var(--rotate));
+  }
+}

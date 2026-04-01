@@ -1545,10 +1545,9 @@ footer svg {
     align-items: center;
     justify-content: space-between;
     background: #242424;
-    color: #ffffff;
     font-weight: 300;
     font-family: 'poppins' sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 .container-load-more {
@@ -1756,9 +1755,8 @@ html.is-touch button:focus {
     }
 
     .coppyright {
-        justify-content: center;
-        flex-direction: column;
-        padding: 3rem 2.5%;
+        justify-content: space-between;
+        padding: 0.5rem 2.5%;
         gap: 1rem;
     }
 
