@@ -42,12 +42,16 @@ header {
 }
 
 .hdr-hero {
+    position: relative;
+    width: max-content;
     display: flex;
     align-items: center;
     justify-content: left;
 }
 
 .hdr-btn {
+    position: relative;
+    width: max-content;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -1698,12 +1702,12 @@ html.is-touch button:focus {
     }
 
     .btn-search {
-        width: 65%;
+        width: 80%;
     }
 
     .btn-search:focus,
     .btn-search:focus-within {
-        width: 70%;
+        width: 85%;
     }
 
     .container-list {
