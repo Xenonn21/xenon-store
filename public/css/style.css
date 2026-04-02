@@ -890,17 +890,26 @@ main {
     background: #242424d2;
 }
 
+.sold-layer {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    padding: 2px;
+    border: 1px solid #6366f1;
+    border-radius: 0.5rem;
+}
+
 .sold {
     position: relative;
     background: transparent;
     color: #ffffff;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     border-radius: 0.5rem;
-    border: 2px solid #b91c1c;
-    font-weight: 700;
+    border: 1px solid #6366f1;
+    font-weight: 500;
     font-size: 0.8rem;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.07em;
     pointer-events: none;
     overflow: hidden;
 }

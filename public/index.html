@@ -354,7 +354,9 @@
             x-transition:leave-end="fade-up-leave-end" x-cloak aria-hidden="false">
             <div class="card">
               <div class="card-sold" x-show="!game.status" x-cloak aria-hidden="true">
-                <div class="sold">SOLD</div>
+                <div class="sold-layer">
+                  <div class="sold">SOLD</div>
+                </div>
               </div>
 
               <div class="card-loader" x-show="game.status" x-cloak aria-hidden="true">
