@@ -86,16 +86,6 @@ input {
     background: transparent;
 }
 
-/* smaller icon on mobile */
-@media (max-width: 480px) {
-    .input-with-icon .toggle-password {
-        height: 30px;
-        width: 30px;
-        font-size: 13px;
-        right: 6px
-    }
-}
-
 /* btn kembali */
 .btn-kembali {
     display: flex;
