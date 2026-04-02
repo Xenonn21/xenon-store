@@ -896,7 +896,7 @@ main {
     height: max-content;
     padding: 2px;
     border: 1px solid #6366f1;
-    border-radius: 0.5rem;
+    border-radius: 0.65rem;
 }
 
 .sold {
