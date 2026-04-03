@@ -523,7 +523,7 @@ header {
     display: grid;
     place-items: center;
     border: 1px solid #6366f1;
-    border-radius: 0.35rem;
+    border-radius: 0.2rem;
     width: max-content;
     height: max-content;
     padding: 1px;
