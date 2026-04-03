@@ -526,13 +526,14 @@ header {
 }
 
 .sold-search {
+    position: relative;
     background: transparent;
     color: #ffffff;
     padding: 0.2rem 0.6rem;
     border-radius: 0.2rem;
     border: 1px solid #6366f1;
     font-weight: 500;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     letter-spacing: 0.04em;
     pointer-events: none;
