@@ -209,8 +209,10 @@
           <a :href="`/game/mobile-legends/${game.public_id}`" class="search-links stagger-fade"
             :style="`animation-delay: ${getSearchDelay(idx)}s`">
             <div class="search-thumb">
-              <div class="card-sold-search" x-show="!game.status" x-cloak aria-hidden="true">
+              <div class="sold-layer-search">
+                <div class="card-sold-search" x-show="!game.status" x-cloak aria-hidden="true">
                 <span class="sold-search">SOLD</span>
+                </div>
               </div>
               <img loading="lazy" :src="game.imgAkun" alt="" class="img-search" :class="{'img-sold': !game.status}" />
             </div>
