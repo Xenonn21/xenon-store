@@ -509,15 +509,6 @@ header {
 }
 
 .sold-layer-search {
-    position: relative;
-    width: max-content;
-    height: max-content;
-    padding: 1px;
-    border: 1px solid #6366f1;
-    border-radius: 0.35rem;
-}
-
-.card-sold-search {
     position: absolute;
     z-index: 15;
     width: 100%;
@@ -525,6 +516,15 @@ header {
     background: #242424d2;
     display: grid;
     place-items: center;
+}
+
+.card-sold-search {
+    position: relative;
+    width: max-content;
+    height: max-content;
+    padding: 1px;
+    border: 1px solid #6366f1;
+    border-radius: 0.35rem;
 }
 
 .sold-search {
