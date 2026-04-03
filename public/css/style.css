@@ -522,15 +522,15 @@ header {
     position: relative;
     border: 1px solid #6366f1;
     border-radius: 0.35rem;
-    height: max-content;
-    width: max-content;
+    padding: 0.5rem;
 }
 
 .sold-search {
     position: relative;
     background: transparent;
     color: #ffffff;
-    padding: 0.2rem 0.6rem;
+    height: max-content;
+    width: max-content;
     border-radius: 0.2rem;
     border: 1px solid #6366f1;
     font-weight: 500;
