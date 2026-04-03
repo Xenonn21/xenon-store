@@ -229,8 +229,8 @@
           <a :href="`/game/mobile-legends/${game.public_id}`" class="search-links stagger-fade"
             :style="`animation-delay: ${getSearchDelay(idx)}s`">
             <div class="search-thumb">
-              <div class="sold-layer-search">
-                <div class="card-sold-search" x-show="!game.status" x-cloak aria-hidden="true">
+              <div class="sold-layer-search" x-show="!game.status" x-cloak aria-hidden="true">
+                <div class="card-sold-search">
                 <span class="sold-search">SOLD</span>
                 </div>
               </div>
@@ -337,7 +337,17 @@
                 height: 100%; background: #242424d2; display: grid; place-items: center;
                 z-index: 10;">
 
-                <div class="layer-sold-slider">
+                <div class="layer-sold-slider"
+                style="
+                position: relative;
+                border: 1px solid #6366f1;
+                padding: 1px;
+                border-radius: 0.3rem;
+                width: max-content;
+                height: max-content;
+                display: grid;
+                place-items: center;">
+                
                   <div class="sold-slider" style="
                 position: absolute;
                 background: transparent;
