@@ -520,8 +520,6 @@ header {
 
 .card-sold-search {
     position: relative;
-    width: max-content;
-    height: max-content;
     padding: 1px;
     border: 1px solid #6366f1;
     border-radius: 0.35rem;
