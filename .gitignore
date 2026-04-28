@@ -14,6 +14,16 @@ server.js
 convert-img.js
 readme.md
 
+# folder css
+public/css/style.css
+public/css/admin.css
+public.css/login.css
+
+# folder assets
+public/assets/animbox.css
+public/assets/cardAnim.css
+public/assets/loader.css
+
 public/img-webp
 public/img-backup
 public/logo

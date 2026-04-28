@@ -9,13 +9,13 @@
 
     <!-- SEO & Social Media -->
     <meta name="description"
-      content="Jual beli akun Mobile Legends. Cek koleksi dan harga terbaik hanya di Xenon Store." />
-    <meta name="keywords" content="jual akun ML, beli akun Mobile Legends, top up ML, Xenon Store" />
-    <meta name="author" content="Xenon Store" />
+      content="Jual beli akun Mobile Legends. Cek koleksi dan harga terbaik hanya di VoiTzu Store." />
+    <meta name="keywords" content="jual akun ML, beli akun Mobile Legends, top up ML, VoiTzu Store" />
+    <meta name="author" content="VoiTzu Store" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Xenon Store" />
+    <meta property="og:title" content="VoiTzu Store" />
     <meta property="og:description" content="Jual beli akun Mobile Legends. Cek koleksi dan harga terbaik." />
     <meta property="og:image"
       content="https://lzycriwqrcqbiijtiipa.supabase.co/storage/v1/object/public/gambar/assets/akun_1771483755788_o1f79o5cuke.webp" />
@@ -23,7 +23,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Xenon Store" />
+    <meta name="twitter:title" content="VoiTzu Store" />
     <meta name="twitter:description" content="Jual beli akun Mobile Legends. Cek koleksi dan harga terbaik." />
     <meta name="twitter:image"
       content="https://lzycriwqrcqbiijtiipa.supabase.co/storage/v1/object/public/gambar/assets/akun_1771483755788_o1f79o5cuke.webp" />
@@ -43,7 +43,7 @@
     <link rel="image_src"
       href="https://lzycriwqrcqbiijtiipa.supabase.co/storage/v1/object/public/gambar/assets/akun_1771483755788_o1f79o5cuke.webp" />
 
-    <title>Xenon Store</title>
+    <title>VoiTzu Store</title>
 
     <!-- Touch Device Class -->
     <script>
@@ -55,10 +55,10 @@
     </script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="assets/loader.css" />
-    <link rel="stylesheet" href="assets/cardAnim.css" />
-    <link rel="stylesheet" href="assets/animbox.css">
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="assets/loader.min.css" />
+    <link rel="stylesheet" href="assets/cardAnim.min.css" />
+    <link rel="stylesheet" href="assets/animbox.min.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -78,16 +78,16 @@
   <!-- sidebar -->
   <div class="sidebar" id="sidebar">
     <img loading="lazy"
-      src="https://lzycriwqrcqbiijtiipa.supabase.co/storage/v1/object/public/gambar/logo/xenon-store.webp"
-      alt="Xenon Store" class="logo" />
+      src="https://lzycriwqrcqbiijtiipa.supabase.co/storage/v1/object/public/gambar/logo/voitzu.webp"
+      alt="VoiTzu Store" class="logo" />
 
-    <a href="/id-id" class="sidebar-links">
+    <a href="/" class="sidebar-links">
       <p>Beranda</p>
       <i class="fa-solid fa-house"></i>
     </a>
 
     <a target="_blank" rel="noopener noreferrer"
-      href="https://wa.me/6285775341379?text=Halo%20Admin%20Xenon%20Store👋.%20Saya%20ingin%20menjual%20akun%20*Mobile%20Legends*%20saya."
+      href="https://wa.me/6285775341379?text=Halo%20Admin%20VoiTzu%20Store👋.%20Saya%20ingin%20menjual%20akun%20*Mobile%20Legends*%20saya."
       class="sidebar-links">
       <p>Jual Akun ?</p>
       <i class="fa-solid fa-tags"></i>
@@ -246,8 +246,8 @@
       </button>
 
       <img loading="lazy"
-        src="https://lzycriwqrcqbiijtiipa.supabase.co/storage/v1/object/public/gambar/logo/xenon-store.webp"
-        alt="Xenon Store" class="logo" />
+        src="https://lzycriwqrcqbiijtiipa.supabase.co/storage/v1/object/public/gambar/logo/voitzu.webp"
+        alt="VoiTzu Store" class="logo" />
     </div>
 
     <div class="hdr-btn">
@@ -266,6 +266,7 @@
 
   <!-- main -->
   <main>
+
     <section class="container-banner">
       <!-- Canvas existing (tetap) -->
       <canvas id="star-canvas" aria-hidden="true"></canvas>
@@ -346,8 +347,27 @@
         </div>
       </div>
 
-      <div class="container-list-3">
+      <div class="container-list-3" :class="{'is-loading': !loaded}">
         <!-- Modified: staggered fade + index + key with animCounterMain -->
+
+<template x-if="!loaded">
+  <template x-for="i in 10">
+    <div class="card-parents">
+
+      <div class="card">
+        <div class="skeleton-img"></div>
+      </div>
+
+      <div class="card-info-2">
+        <div class="skeleton-text title"></div>
+        <div class="skeleton-text price"></div>
+      </div>
+
+    </div>
+  </template>
+</template>
+
+      <template x-if="loaded">
         <template x-for="(game, idx) in visibleData" :key="game.namaAkun + '|' + animCounterMain">
           <a :href="`/game/mobile-legends/${game.public_id}`" class="card-parents stagger-fade"
             :style="`animation-delay: ${getMainDelay(idx)}s`" x-transition:enter="fade-up-enter"
@@ -375,8 +395,9 @@
             </div>
           </a>
         </template>
-
+</template>
       </div>
+
       <!-- pesan jika kosong (tampilkan hanya setelah data ter-load) -->
       <template x-if="filteredLength === 0 && loaded">
         <div class="empty-message" :class="{ 'filter-active': selectedFilter !== 'all' }"
@@ -452,10 +473,10 @@
       <div class="footer-2">
         <div class="footer-card">
           <img loading="lazy"
-            src="https://lzycriwqrcqbiijtiipa.supabase.co/storage/v1/object/public/gambar/logo/xenon-store.webp"
-            alt="Xenon Store" class="footer-logo" />
+            src="https://lzycriwqrcqbiijtiipa.supabase.co/storage/v1/object/public/gambar/logo/voitzu.webp"
+            alt="VoiTzu Store" class="footer-logo" />
           <div class="footer-deskripsi">
-            Xenon Store menjual berbagai akun Mobile Legends dengan harga bervariasi sesuai budgetmu. Pilihan terbaik
+            VoiTzu Store menjual berbagai akun Mobile Legends dengan harga bervariasi sesuai budgetmu. Pilihan terbaik
             untuk para
             gamers sejati!
           </div>
@@ -465,9 +486,9 @@
           <div class="footer-title">Peta Situs</div>
           <div class="footer-hr"></div>
           <div class="footer-list">
-            <a href="/id-id" class="footer-links">Beranda</a>
-            <a href="https://wa.me/6285775341379?text=Halo%20Admin%20Xenon%20Store👋.%20Saya%20ingin%20menjual%20akun%20*Mobile%20Legends*%20saya." class="footer-links">Jual Akun ?</a>
-            <a href="https://www.instagram.com/xenon.store969/" class="footer-links">Testimoni</a>
+            <a href="/" class="footer-links">Beranda</a>
+            <a href="https://wa.me/6285775341379?text=Halo%20Admin%20VoiTzu%20Store👋.%20Saya%20ingin%20menjual%20akun%20*Mobile%20Legends*%20saya." class="footer-links">Jual Akun ?</a>
+            <a href="https://www.instagram.com/voitzu.store/" class="footer-links">Testimoni</a>
             <a href="https://wa.me/6285775341379" class="footer-links">Chat Admin</a>
           </div>
         </div>
@@ -476,12 +497,12 @@
           <div class="footer-title">Media Sosial</div>
           <div class="footer-hr"></div>
           <div class="footer-list" style="display: flex; flex-direction: row; gap: 0.5rem;">
-            <a class="footer-sm" href="https://www.instagram.com/xenon.store969/" class="footer-links"
+            <a class="footer-sm" href="https://www.instagram.com/voitzu.store/" class="footer-links"
               target="_blank">
               <i class="fa-brands fa-instagram"></i>
             </a>
 
-            <a class="footer-sm" href="https://www.youtube.com/@ranziroo11" class="footer-links" target="_blank"
+            <a class="footer-sm" href="https://www.youtube.com/@voitzu" class="footer-links" target="_blank"
               rel="noopener noreferrer">
               <i class="fa-brands fa-youtube"></i>
             </a>
@@ -507,7 +528,7 @@
       </div>
 
       <div class="coppyright">
-        <div style="font-size: 0.7rem; color: #ffffffbe;">&copy; <span id="year"></span> Xenon Store</div>
+        <div style="font-size: 0.7rem; color: #ffffffbe;">&copy; <span id="year"></span> VoiTzu Store</div>
         <div style="font-size: 0.7rem; color: #ffffffbe;">Terakhir diakses: <span id="last-accessed"></span></div>
       </div>
     </footer>
@@ -520,6 +541,7 @@
 
   <!-- existing project scripts (tetap) -->
   <script src="/js/apwssmeoow2453sGH.min.js"></script>
+
   <script src="/js/glwoblswsmsw.min.js"></script>
   <script src="/assets/lload34mdelp.min.js"></script>
   <script src="/js/components/strsInd4swsl2023dk.min.js"></script>
